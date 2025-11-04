@@ -51,6 +51,7 @@ body {
     width: 100%;
     column-gap: 1%;
     align-items: start;
+    row-gap: 40px; 
 }
 
 .kepek {
@@ -63,6 +64,7 @@ body {
 }
 .kepek p {
     margin-top: 10px;
+    font-size: clamp(16px, 4vw, 26px);
 }
 
 .kepek h2 {
@@ -70,43 +72,38 @@ body {
     text-align: center;
     background-color: aquamarine;
     margin: 0 0 10px 0;
+    font-size: 20px;
 }
 
 .kepek img {
     width: 100%;
-    max-height: 100%; /* a kép nem nyúlik túl */
     height: 100%;
-    object-fit: contain; /* teljes kép látszik, nem vágjuk */
     display: block;
+    object-fit: contain; /* a teljes kép látszik */
+    margin: 0 auto;
 }
 h3 {
     font-style: italic;
     font-size: 20px;
 }
-.lablec a {
-    text-decoration: none;
-    color: darkblue;
+.lablec {
+    margin-top: 26px; /* kis távolság a tartalomtól */
 }
+
+.lablec p,
+.lablec a {
+    display: inline; /* vízszintesen egymás mellett */
+    margin: 0;       /* eltünteti a p alapértelmezett margóját */
+}
+
+.lablec a {
+    color: darkblue;
+    text-decoration: none;
+    margin-left: 5px; /* kis távolság a "Forrás:" és a link között */
+}
+
 .lablec a:hover {
     color: white;
     background-color: gray;
 }
 
-/* @media screen and (max-width:800px) {
-    .tartalom {
-        display: grid;
-        grid-template-columns: 1fr;
-        width: 100%;
-    }
-}
-
-@media screen and (max-width:1000px) and (min-width:800px) {
-    .tartalom {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        width: 100%;
-        column-gap: 3%;
-        row-gap: 3%;
-        padding: 10px;
-    }
-} */
