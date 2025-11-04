@@ -1,0 +1,99 @@
+* {
+    text-justify: auto;
+}
+
+body {
+    background-color: rgb(209, 229, 235);
+    color: darkslategray
+}
+
+#tarolo {
+    width: 75%;
+    margin: auto;
+}
+
+.fejlec {
+    font-family: "Broadway";
+    background-color: rgb(33, 57, 122);
+    color: aqua;
+    align-items: center;
+    justify-items: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.menu {
+    font-family: "Broadway";
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: gray;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.menu a {
+    color: aqua;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: white;
+    text-decoration: none;
+    background-color: rgb(95, 95, 95);
+}
+
+.tartalom {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    column-gap: 1%;
+}
+
+.kepek {
+    display: grid;
+    border: 3px solid darkgray;
+    background-color: white;
+    padding: 5px;
+}
+
+.kepek h2 {
+    font-size: 20px;
+    text-align: center;
+    background-color: aquamarine;
+}
+
+.kepek img {
+    width: 100%;
+}
+h3 {
+    font-style: italic;
+    font-size: 20px;
+}
+.lablec a {
+    text-decoration: none;
+    color: darkblue;
+}
+.lablec a:hover {
+    color: white;
+    background-color: gray;
+}
+
+@media screen and (max-width:800px) {
+    .tartalom {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:1000px) and (min-width:800px) {
+    .tartalom {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        column-gap: 3%;
+        row-gap: 3%;
+        padding: 10px;
+    }
+}
