@@ -25,11 +25,13 @@ body {
 .menu {
     font-family: "Broadway";
     display: grid;
-    grid-template-columns: 1fr 1fr;
     background-color: gray;
     text-align: center;
     padding-bottom: 10px;
     padding-top: 10px;
+    justify-content: center; /* középre vízszintesen */
+    gap: 5px; /* távolság a linkek között */
+    grid-auto-flow: column
 }
 
 .menu a {
@@ -45,26 +47,37 @@ body {
 
 .tartalom {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     width: 100%;
     column-gap: 1%;
+    align-items: start;
 }
 
 .kepek {
     display: grid;
+    grid-template-rows: auto 200px 1fr; /* cím, kép, szöveg */
     border: 3px solid darkgray;
     background-color: white;
-    padding: 5px;
+    padding: 10px;
+    height: 100%;
+}
+.kepek p {
+    margin-top: 10px;
 }
 
 .kepek h2 {
     font-size: 20px;
     text-align: center;
     background-color: aquamarine;
+    margin: 0 0 10px 0;
 }
 
 .kepek img {
     width: 100%;
+    max-height: 100%; /* a kép nem nyúlik túl */
+    height: 100%;
+    object-fit: contain; /* teljes kép látszik, nem vágjuk */
+    display: block;
 }
 h3 {
     font-style: italic;
@@ -79,7 +92,7 @@ h3 {
     background-color: gray;
 }
 
-@media screen and (max-width:800px) {
+/* @media screen and (max-width:800px) {
     .tartalom {
         display: grid;
         grid-template-columns: 1fr;
@@ -96,4 +109,4 @@ h3 {
         row-gap: 3%;
         padding: 10px;
     }
-}
+} */
